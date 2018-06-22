@@ -326,7 +326,7 @@ def reserve(copy_id):
                 user_id=session['id'],
                 book_status=BookStatus.RESERVED,
                 reservation_begin=datetime.now(tz=pytz.utc),
-                reservation_end=datetime.now(tz=pytz.utc) + timedelta(minutes=2)
+                reservation_end=datetime.now(tz=pytz.utc) + timedelta(hours=48)
             )
             db.session.add(res)
             db.session.commit()
